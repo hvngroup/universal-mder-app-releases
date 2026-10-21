@@ -1,0 +1,49 @@
+name: Báo lỗi
+description: Ứng dụng hoạt động không đúng như mong đợi
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cảm ơn anh/chị đã báo lỗi. **Không dán tài liệu chứa thông tin nội bộ, mật khẩu hay dữ liệu khách hàng** — hãy dùng một file `.md` mẫu tái hiện được lỗi.
+        Lỗ hổng bảo mật: gửi riêng theo [SECURITY.md](../blob/main/SECURITY.md), không mở issue công khai.
+  - type: textarea
+    id: what
+    attributes:
+      label: Chuyện gì đã xảy ra?
+      description: Và anh/chị mong đợi điều gì?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Các bước tái hiện
+      placeholder: |
+        1. Mở file ...
+        2. Bấm ...
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Đoạn Markdown tái hiện lỗi (nếu có)
+      render: markdown
+  - type: input
+    id: version
+    attributes:
+      label: Phiên bản app
+      description: "macOS: menu HVN Markdown Viewer → Giới thiệu. Windows: ⋯ → Giới thiệu."
+      placeholder: "1.2.0 (3)"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Hệ điều hành
+      placeholder: "macOS 15.5 hoặc Windows 11 24H2"
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Ảnh chụp màn hình hoặc thông tin khác
